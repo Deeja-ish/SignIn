@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #5c5470;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    text-align: center;
+    background-color: #dbd8e3;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+header h1{
+    font-size: 2.5em;
+}
+ul{
+    padding:0 10px;
+    display: inline-flex;
+}
+
+li{
+    margin: 0 10px;
+}
+
+main{
+    background-color: #dbd8e3;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+main h3{
+    text-align:center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+form{
+    padding: 10px;
+}
+
+input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none
+}
+input[type="email"]:focus{
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 84, 112, 0.5);
+}
+
+input[type="submit"]{
+    background-color: #5c5470;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: #2a2438;
+    transition: background-color 0.3s ease;
+}
