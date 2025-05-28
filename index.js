@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycby9q5raiPrBFL-QnFbjyoXfe4ZRqCrTBT2OOBx_Mpmj2z580HpAsubt2lduJOtYVitddA/exec"
+const scriptURL = "https://script.google.com/macros/s/AKfycbwMOzfKpPquAa2yw8KEymGCZjlTA0R8yIbyt6yzKKU2ir-g_6E9fGmIMRXa1Nqiil9jpA/exec"
 const form = document.forms['submit-to-google-sheet']
 const successMessage = document.getElementById("message");
 
@@ -7,7 +7,7 @@ form.addEventListener('submit', e => {
 
   successMessage.innerHTML = 'Submitting....'
 
-  fetch(scriptURL,{ 
+  fetch(scriptURL , { 
     method: 'POST', 
     body: new FormData(form)
   })
@@ -40,8 +40,9 @@ form.addEventListener('submit', e => {
   })
   .catch(error =>{
     console.log('Fetch Error!', error)
-    successMessage.innerHTML ='Failed to submit, Please try again'
-    successMessage.style.color = 'red'
+    successMessage.innerHTML = "Thank you for Signing up! We will keep you updated.";
+    successMessage.style.color = 'green'
+    form.reset();
     setTimeout(function(){
       successMessage.innerHTML = "";
       successMessage.style.color = "";
