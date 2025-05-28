@@ -28,7 +28,7 @@ form.addEventListener('submit', e => {
       form.reset();
     }
     else{
-      successMessage.innerHTML = "Error: " + data.Error;
+      successMessage.innerHTML = "Error: " + data.error;
       successMessage.style.color = 'red'
       console.error('Error from App Script:', data.error);
     }
@@ -48,16 +48,4 @@ form.addEventListener('submit', e => {
     }, 5000)
   })
 })
-      // .then(response => {
-      //   successMessage.innerHTML = "Thank you for Signing up! We will keep you updated.";
-      //   setTimeout(function () {
-      //     // Clear the success message after 5 seconds
-      //     successMessage.innerHTML = "";
-      //   }, 5000);
-      //   console.log('Success!', response)
-      //   // Reset the form after successful submission
-      //   form.reset()
-      // })
-      // .catch(error => console.error('Error!', error.message))
-
 
