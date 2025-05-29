@@ -1,9 +1,24 @@
 const scriptURL = "https://script.google.com/macros/s/AKfycbwMOzfKpPquAa2yw8KEymGCZjlTA0R8yIbyt6yzKKU2ir-g_6E9fGmIMRXa1Nqiil9jpA/exec"
 const form = document.forms['submit-to-google-sheet']
 const successMessage = document.getElementById("message");
+const ideaInput = document.getElementById('idea');
+const ideaMessage = document.getElementById('ideaMessage')
+
 
 form.addEventListener('submit', e => {
   e.preventDefault()
+
+  if(ideaInput.value.trim() === '' || ideaInput.value === null){
+    ideaMessage.innerHTML = '* Required Field'
+    ideaMessage.style.color = 'red'
+  
+  successMessage.innerHTML = '';
+  successMessage.style.color = '';
+
+  return;
+  }
+  ideaMessage.innerHTML = '';
+  ideaMessage.style.color = '';
 
   successMessage.innerHTML = 'Submitting....'
 

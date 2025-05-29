@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -93,4 +94,8 @@ textarea{
 textarea:hover{
     outline: none;
     box-shadow: 0 0 5px rgba(92, 84, 112, 0.5);
+}
+
+#ideaMessage{
+    font-size: 10px;
 }

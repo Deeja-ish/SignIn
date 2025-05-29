@@ -24,16 +24,17 @@
             <form name='submit-to-google-sheet'>
                 <label for="name">Name:</label>
                 <br/>
-                <input type="name" id="name" name="Name" placeholder="Enter Your Name" reaquired>
+                <input type="name" id="name" name="Name" placeholder="Enter Your Name" required>
                 <br/>
                 <label for="email">Email:</label>
                 <br/>
                 <input type="email" id="email" name="Email" placeholder="Enter your email" required>
-                <label for="idea">What is your creative Idea:</label>
+                <label for="idea">What is your creative Idea:</label><span id="ideaMessage"></span>
                 <br/>
                 <textarea type="text" id="idea" name="Idea" placeholder="Write down your Idea" rows="5" cols="30"></textarea>
                 <br/>
                 <input type="submit" value="Stay Updated" class="submit-button">
+                <p id="ideaMessage"></p>
             </form>
             <p id="message"></p>
         </div>
