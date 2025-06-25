@@ -1,44 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover Yours Sign In</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discover Yours - Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      background-color: #5c5470;
+      color: #333;
+    }
+
+    header {
+      background-color: #dbd8e3;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    ul {
+      display: inline-flex;
+      gap: 15px;
+      font-size: 0.9em;
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    main {
+      background-color: #dbd8e3;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 20px 30px -10px rgba(38, 57, 77, 0.3);
+    }
+
+    main h3 {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 1.4em;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #f8f8f8;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: 0 0 8px rgba(92, 84, 112, 0.5);
+      background-color: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-button {
+      background-color: #5c5470;
+      color: white;
+      font-size: 16px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background-color: #2a2438;
+      transform: scale(1.02);
+    }
+
+    #message {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9em;
+      color: white;
+    }
+
+    .note {
+      font-size: 0.85em;
+      text-align: center;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      ul {
+        flex-direction: column;
+        font-size: 0.85em;
+        gap: 5px;
+      }
+
+      main {
+        margin: 10px;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Discover Yours</h1>
-        <ul>
-            <li>Unleash Your Potencial</li>
-            <li>Empower Your Dreams</li>
-            <li>Connect Your Community</li>
-        </ul>
-    </header>
-    <main>
-        <h3>Sign Up to get in touch with your dreams and discover new opportunities!</h3>
-        <div>
-            <form name='submit-to-google-sheet'>
-                <label for="name">Name:</label>
-                <br/>
-                <input type="name" id="name" name="Name" placeholder="Enter Your Name" required>
-                <br/>
-                <label for="email">Email:</label>
-                <br/>
-                <input type="email" id="email" name="Email" placeholder="Enter your email" required>
-                <label for="idea">What is your dream:</label><span id="ideaMessage"></span>
-                <br/>
-                <textarea type="text" id="idea" name="Idea" placeholder="Write down what your crazy dream is about lets support you " rows="5" cols="30"></textarea>
-                <br/>
-                <input type="submit" value="Stay Updated" class="submit-button">
-                <p id="ideaMessage"></p>
-            </form>
-            <p id="message"></p>
-        </div>
-    </main>
-    <script src="index.js"></script>
+  <header>
+    <h1>Discover Yours</h1>
+    <ul>
+      <li>Unleash Your Potential</li>
+      <li>Empower Your Dreams</li>
+      <li>Connect Your Community</li>
+    </ul>
+  </header>
+
+  <main>
+    <h3>✨ Ready to Start Your Journey?<br>Join Discover Yours to grow your skills, share your dream, and get support from a rising community.</h3>
+
+    <form name="submit-to-google-sheet">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="Name" placeholder="Your name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="Email" placeholder="Your email" required />
+
+      <label for="idea">What's your dream?</label>
+      <textarea id="idea" name="Idea" placeholder="Write your dream or passion we’re here to support you!" required></textarea>
+
+      <input type="submit" value="Stay Updated" class="submit-button" />
+      <p id="message"></p>
+    </form>
+
+    <p class="note">This project is built by a student learning and growing  your support means everything. 💙</p>
+    <p class="note"><strong>🎁 Bonus:</strong> Early sign-ups get exclusive access to behind-the-scenes progress, community invites & free guides when we launch!</p>
+  </main>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwMOzfKpPquAa2yw8KEymGCZjlTA0R8yIbyt6yzKKU2ir-g_6E9fGmIMRXa1Nqiil9jpA/exec";
+    const form = document.forms['submit-to-google-sheet'];
+    const successMessage = document.getElementById("message");
+    const ideaInput = document.getElementById('idea');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      if (ideaInput.value.trim() === '') {
+        successMessage.innerHTML = '* Please share your dream before submitting.';
+        successMessage.style.color = 'red';
+        return;
+      }
+
+      successMessage.innerHTML = 'Submitting...';
+      successMessage.style.color = 'white';
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+      })
+        .then(response => {
+          if (!response.ok) throw new Error("Network error");
+          successMessage.innerHTML = "✅ Thank you for signing up! We’ll keep you updated.";
+          successMessage.style.color = 'lightgreen';
+          form.reset();
+          setTimeout(() => {
+            successMessage.innerHTML = '';
+          }, 5000);
+        })
+        .catch(error => {
+         successMessage.innerHTML = `Thank you for signing up! 🎉<br>
+         <a href="https://drive.google.com/file/d/11vaBZ0_yDujoaQtCilU6_m8jvxioNG1b/view?usp=drive_link" target="_blank" style="color: #fff; font-weight: bold;">Click here to download your free e-book!</a>`;
+
+          successMessage.style.color = 'lightgreen';
+          form.reset();
+          setTimeout(() => {
+            successMessage.innerHTML = '';
+          }, 5000);
+        });
+    });
+  </script>
 </body>
 </html>
